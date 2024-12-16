@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            overflow: hidden; /* Menambahkan overflow untuk body agar tidak muncul scroll di luar form */
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: left;
+            max-height: 90vh; /* Membatasi tinggi maksimal form */
+            overflow-y: auto; /* Menambahkan scroll jika form melebihi tinggi */
+            position: relative;
+        }
+
+        h2 {
+            text-align: center;
+            position: sticky; /* Menempelkan judul di atas */
+            top: 0;
+            background-color: #fff;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Memberikan bayangan saat scroll */
+            margin: 0;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #informasi {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Form Input</h2>
+        <form action="input.php" onsubmit="return validateForm()" method="post">
+
+            <label for="kecamatan">Kecamatan:</label><br>
+            <input type="text" id="kecamatan" name="kecamatan" value=""><br>
+
+            <label for="tahun">Tahun:</label><br>
+            <input type="text" id="tahun" name="tahun" value=""><br>
+
+            <label for="tb_paru">TB Paru:</label><br>
+            <input type="number" id="tb_paru" name="tb_paru" value=""><br>
+
+            <label for="pneumonia_balita">Pneumonia Balita:</label>
+            <input type="number" id="pneumonia_balita" name="pneumonia_balita" value=""><br>
+
+            <label for="dbd">DBD:</label>
+            <input type="number" id="dbd" name="dbd" value=""><br>
+
+            <label for="jumlah">Jumlah:</label><br>
+            <input type="text" id="jumlah" name="jumlah" value=""><br><br>
+
+            <label for="luas">Luas (km²):</label>
+            <input type="number" id="luas" name="luas" step="any" value=""><br><br>
+
+            <label for="jumlah_pddk">Jumlah Penduduk:</label>
+            <input type="number" id="jumlah_pddk" name="jumlah_pddk" value=""><br><br>
+
+            <label for="longitude">Longitude:</label>
+            <input type="number" id="longitude" name="longitude" step="any" value=""><br><br>
+
+            <label for="latitude">Latitude:</label>
+            <input type="number" id="latitude" name="latitude" step="any" value=""><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <p id="informasi"></p>
+    </div>
+
+    <script>
+        function validateForm() {
+            let kecamatan = document.getElementById("kecamatan").value;
+            let tahun = document.getElementById("tahun").value;
+            let tb_paru = document.getElementById("tb_paru").value;
+            let pneumonia_balita = document.getElementById("pneumonia_balita").value;
+            let dbd = document.getElementById("dbd").value;
+            let jumlah = document.getElementById("jumlah").value;
+            let luas = document.getElementById("luas").value;
+            let jumlah_pddk = document.getElementById("jumlah_pddk").value;
+            let longitude = document.getElementById("longitude").value;
+            let latitude = document.getElementById("latitude").value;
+
+            let text = "";
+            // Validasi kecamatan
+            if (kecamatan.trim() === "") {
+                text += "Data kecamatan tidak boleh kosong.<br>";
+            }
+
+            // Validasi tahun
+            // Validasi tahun (antara 1900 hingga tahun sekarang)
+            if (isNaN(tahun) || tahun < 1900 || tahun > new Date().getFullYear()) {
+                text += "Data tahun harus angka antara 1900 dan tahun sekarang.<br>";
+            }
+
+            // Validasi tb_paru
+            if (isNaN(tb_paru) || tb_paru < 1) {
+                text += "Data TB Paru harus angka dan tidak boleh bernilai negatif.<br>";
+            }
+
+            // Validasi pneumonia_balita
+            if (isNaN(pneumonia_balita) || pneumonia_balita < 1) {
+                text += "Data Pneumonia Balita harus angka dan tidak boleh bernilai negatif.<br>";
+            }
+
+            // Validasi dbd
+            if (isNaN(dbd) || dbd < 1) {
+                text += "Data DBD harus angka dan tidak boleh bernilai negatif.<br>";
+            }
+
+            // Validasi jumlah (angka positif)
+            if (isNaN(jumlah) || jumlah <= 0) {
+                text += "Data jumlah harus angka positif.<br>";
+            }
+
+            if (isNaN(luas) || luas <= 0) {
+                text += "Data luas harus berupa angka desimal positif.<br>";
+            }
+
+            if (isNaN(jumlah_pddk) || jumlah_pddk < 1) {
+                text += "Data jumlah_pddk harus angka dan tidak boleh bernilai negatif.<br>";
+            }
+
+            // Validasi longitude dan latitude (angka desimal)
+            if (isNaN(longitude) || isNaN(latitude) || longitude === "" || latitude === "") {
+                text += "Data longitude dan latitude harus berupa angka desimal.<br>";
+            }
+
+            document.getElementById("informasi").innerHTML = text;
+
+            // Jika ada pesan, hentikan pengiriman form
+            if (text !== "") {
+                return false;
+            }
+
+            return true; // Lanjutkan pengiriman form jika semua validasi berhasil
+        }
+    </script>
+
+</body>
+
+</html>

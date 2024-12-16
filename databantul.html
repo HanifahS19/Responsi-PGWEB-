@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Bantul</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        main {
+            margin-top: 56px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            /* Garis pemisah antar kolom */
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">BANTUL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#deskripsi">Deskripsi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#penduduk">Penduduk</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bupati">Daftar Bupati Bantul</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kecamatan">Kecamatan</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#puskesmasrs">Puskesmas dan Rumah Sakit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#website">Website</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#grafik">Grafik Data Penyakit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#peta">Peta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kritikdansaran">Kritik dan Saran</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Kembali ke halaman utama</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Pembuat</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container border border-info rounded">
+            <div class="alert alert-info text-center" role="alert">
+                <h1>KAB BANTUL</h1>
+                <h4>Provinsi Yogyakarta</h4>
+            </div>
+
+            <div class="row">
+                <div class="col-6 offset-3">
+                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="image/petabantul.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/bantul1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/bantul2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/jogja.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header alert alert-info">
+                    <h4 id="deskripsi">Deskripsi</h4>
+                </div>
+                <div class="card-body">
+                    <p>Kabupaten Bantul merupakan adalah sebuah wilayah kabupaten yang terletak di provinsi Daerah
+                        Istimewa Yogyakarta, Indonesia. Ibu kotanya adalah Kapanewon Bantul. Pada pertengahan tahun
+                        2024, jumlah penduduk Bantul sebanyak 976.573 jiwa.[1].</p>
+                    <p>Wilayah Kabupaten Bantul terletak pada titik koordinat 07°44′04″–08° 00′ 27″ Lintang Selatan dan
+                        110°12′34″–110°31′08″ Bujur Timur.[6] Luas wilayah Kabupaten Bantul adalah 508,85 km2.[7]
+                        Persentase luas Kabupaten Bantul terhadap luas Provinsi Daerah Istimewa Yogyakarta adalah
+                        15,91%.[8].</p>
+                    <p>Topografi Kabupaten Bantul sebesar 40% merupakan dataran rendah.[10] Sedangkan 60% wilayah
+                        Kabupaten Bantul merupakan perbukitan yang kurang subur.[11] Wilayah Kabupaten Bantul dapat
+                        dibedakan menjadi wilayah bagian barat, bagian tengah, bagian timur, dan bagian selatan. Bagian
+                        barat mencakup wilayah seluas 89,86 km2 atau 17,73% dari luas Kabupaten Bantul yang berupa
+                        dataran rendah dengan kemiringan yang landai serta perbukitan yang membujur dari utara ke
+                        selatan. Bagian tengan merupakan dataran subur yang landai seluas 210,94 km2 atau seluas 41,62 %
+                        dari luas Kabupaten Bantul dan dijadikan sebagai lahan pertanian. Bagian timur meliputi daerah
+                        yang landai, miring dan terjang seluas 206,05 km2 (40,65%). Sementara bagian selatan merupakan
+                        bagian berpasir dan memiliki laguna yang termasuk bagian tengah Kabupaten Bantul. Bagian selatan
+                        Kabupaten Bantul membentang di sepanjang pantai dari Kecamatan Srandakan, Kecamatan Sanden</p>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header alert alert-info">
+                    <h4 id="penduduk">Penduduk</h4>
+                </div>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <th>Penduduk</th>
+                        <th>Jumlah</th>
+                    </tr>
+                    <tr>
+                        <td>Laki-laki</td>
+                        <td> 504.133Jiwa</td>
+                    </tr>
+                    <tr>
+                        <td>Perempuan</td>
+                        <td>509.037Jiwa</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td>1,013.17 Jiwa</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header alert alert-info">
+                    <h4 id="bupati">Daftar Bupati Bantul</h4>
+                </div>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <th>No .</th>
+                        <th colspan="2">Bupati</th>
+                        <th>Mulai Menjabat</th>
+                        <th>Akhir Menjabat</th>
+                        <th colspan="2">Wakil Bupati</th>
+                    </tr>
+
+                    <tr>
+                        <td>32.</td>
+                        <td>
+                            <a href="/wiki/Berkas:Abdul_Halim_Muslih.jpg" class="mw-file-description">
+                                <img src="//upload.wikimedia.org/wikipedia/id/thumb/7/7c/Abdul_Halim_Muslih.jpg/100px-Abdul_Halim_Muslih.jpg"
+                                    decoding="async" width="100" height="133" class="mw-file-element"
+                                    srcset="//upload.wikimedia.org/wikipedia/id/thumb/7/7c/Abdul_Halim_Muslih.jpg/150px-Abdul_Halim_Muslih.jpg 1.5x, //upload.wikimedia.org/wikipedia/id/7/7c/Abdul_Halim_Muslih.jpg 2x"
+                                    data-file-width="180" data-file-height="240">
+                            </a>
+                        </td>
+                        <td>
+                            <a href="/wiki/Abdul_Halim_Muslih" title="Abdul Halim Muslih">H. Abdul Halim Muslih</a>
+                        </td>
+                        <td>26 Februari 2021</td>
+                        <td><i>Petahana</i></td>
+                        <td>
+                            <a href="/wiki/Berkas:Wakil_Bupati_Bantul_Joko_Purnomo.jpg" class="mw-file-description">
+                                <img src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Wakil_Bupati_Bantul_Joko_Purnomo.jpg/100px-Wakil_Bupati_Bantul_Joko_Purnomo.jpg"
+                                    decoding="async" width="100" height="150" class="mw-file-element"
+                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Wakil_Bupati_Bantul_Joko_Purnomo.jpg/150px-Wakil_Bupati_Bantul_Joko_Purnomo.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Wakil_Bupati_Bantul_Joko_Purnomo.jpg/200px-Wakil_Bupati_Bantul_Joko_Purnomo.jpg 2x"
+                                    data-file-width="533" data-file-height="800">
+                            </a>
+                        </td>
+                        <td>
+                            <a href="/wiki/Joko_B._Purnomo" title="Joko B. Purnomo">Joko B. Purnomo</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Link ke file CSS -->
+            <link rel="stylesheet" href="styles.css">
+
+
+            <div class="card mt-4">
+                <div class="card-header alert alert-info">
+                    <h4 id="kecamatan">Kecamatan</h4>
+                </div>
+                <div class="card-body">
+                    <ol>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <li>Bambanglipuro</li>
+                                <li>Banguntapan</li>
+                                <li>Bantul</li>
+                                <li>Dlingo</li>
+                                <li>Imogiri</li>
+                                <li>Jetis</li>
+                                <li>Kasihan</li>
+                                <li>Kretak</li>
+
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <li>Pajangan</li>
+                                <li>Pandak</li>
+                                <li>Piyungan</li>
+                                <li>Pleret</li>
+                                <li>Pundong</li>
+                                <li>Sanden</li>
+                                <li>Sedayu</li>
+                                <li>Sewon</li>
+                                <li>Srandakan</li>
+
+                            </div>
+                        </div>
+                    </ol>
+                </div>
+
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header alert alert-info">
+                    <h4 id="puskesmasrs">Puskesmas dan Rumah sakit</h4>
+                </div>
+                <div class="mw-heading mw-heading3">
+                    <h3 id="Puskesmas">Puskesmas</h3><span class="mw-editsection">
+                        <spa class="mw-editsection-bracket">
+                </div>
+                <div class="card-body">
+                    <ol>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <li>Puskesmas Srandakan di
+                                    <a href="/wiki/Murtigading,_Sanden,_Bantul"
+                                        title="Murtigading, Sanden, Bantul">Murtigading, Sanden</a>
+                                </li>
+                                <li>Puskesmas Kretek di
+                                    <a href="/wiki/Donotirto,_Kretek,_Bantul"
+                                        title="Donotirto, Kretek, Bantul">Donotirto, Kretek</a>
+                                </li>
+                                <li>Puskesmas Pundong di
+                                    <a href="/wiki/Srihardono,_Pundong,_Bantul"
+                                        title="Srihardono, Pundong, Bantul">Srihardono, Pundong</a>
+                                </li>
+                                <li>Puskesmas Bambanglipuro di
+                                    <a href="/wiki/Sidomulyo,_Bambanglipuro,_Bantul"
+                                        title="Sidomulyo, Bambanglipuro, Bantul">Sidomulyo, Bambanglipuro</a>
+                                </li>
+                                <li>Puskesmas Pandak di
+                                    <a href="/wiki/Wijirejo,_Pandak,_Bantul" title="Wijirejo, Pandak, Bantul">Wijirerjo,
+                                        Pandak</a>
+                                </li>
+                                <li>Puskesmas Bantul di
+                                    <a href="/wiki/Palbapang,_Bantul,_Bantul"
+                                        title="Palbapang, Bantul, Bantul">Palbapang, Bantul</a>
+                                </li>
+                                <li>Puskesmas Jetis di
+                                    <a href="/wiki/Trimulyo,_Jetis,_Bantul" title="Trimulyo, Jetis, Bantul">Trimulyo,
+                                        Jetis</a>
+                                </li>
+                                <li>Puskesmas Imogiri di
+                                    <a href="/wiki/Karangtalun,_Imogiri,_Bantul"
+                                        title="Karangtalun, Imogiri, Bantul">Karangtalun, Imogiri</a>
+                                </li>
+
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <li>Puskesmas Dlingo di
+                                    <a href="/wiki/Terong,_Dlingo,_Bantul" title="Terong, Dlingo, Bantul">Terong,
+                                        Dlingo</a>
+                                </li>
+                                <li>Puskesmas Pleret di
+                                    <a href="/wiki/Wonokromo,_Pleret,_Bantul"
+                                        title="Wonokromo, Pleret, Bantul">Wonokromo, Pleret</a>
+                                </li>
+                                <li>Puskesmas Piyungan di
+                                    <a href="/wiki/Srimulyo,_Piyungan,_Bantul"
+                                        title="Srimulyo, Piyungan, Bantul">Srimulyo, Piyungan</a>
+                                </li>
+                                <li>Puskesmas Banguntapan di
+                                    <a href="/wiki/Baturetno,_Banguntapan,_Bantul"
+                                        title="Baturetno, Banguntapan, Bantul">Baturetno, Banguntapan</a>
+                                </li>
+                                <li>Puskesmas Sewon
+                                    <a href="/wiki/Timbulharjo,_Sewon,_Bantul"
+                                        title="Timbulharjo, Sewon, Bantul">Timbulharjo, Sewon</a>
+                                </li>
+                                <li>Puskesmas Kasihan di
+                                    <a href="/wiki/Bangunjiwo,_Kasihan,_Bantul"
+                                        title="Bangunjiwo, Kasihan, Bantul">Bangunjiwo, Kasihan</a>
+                                </li>
+                                <li>Puskesmas Pajangan di
+                                    <a href="/wiki/Sendangsari,_Pajangan,_Bantul"
+                                        title="Sendangsari, Pajangan, Bantul">Sendangsari, Pajangan</a>
+                                </li>
+                                <li>Puskesmas Sedayu di
+                                    <a href="/wiki/Argomulyo,_Sedayu,_Bantul"
+                                        title="Argomulyo, Sedayu, Bantul">Argomulyo, Sedayu</a>
+                                </li>
+                            </div>
+                        </div>
+                    </ol>
+                    <div class="mw-heading mw-heading3">
+                        <h3 id="rumahsakit">Rumah Sakit</h3><span class="mw-editsection">
+                            <spa class="mw-editsection-bracket">
+                                <ol>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12">
+                                            <li>RSUD Panembahan Senopati di
+                                                <a href="/wiki/Bantul,_Bantul" title="Bantul, Bantul">Bantul</a>
+                                            </li>
+                                            <li>RSPAU Hardjolukito si
+                                                <a href="/wiki/Banguntapan,_Bantul"
+                                                    title="Banguntapan, Bantul">Banguntapan</a>
+                                            </li>
+                                            <li>PS PKU Muhammadiyah Bantul di
+                                                <a href="/wiki/Bantul,_Bantul" title="Bantul, Bantul">Bantul</a>
+                                            </li>
+                                            <li>RSPKB Ringroad Selatah di
+                                                <a href="/wiki/Sewon,_Bantul" title="Sewon, Bantul">Sewon</a>
+                                            </li>
+                                            <li>RS Griya Mahardika di
+                                                <a href="/wiki/Sewon,_Bantul" title="Sewon, Bantul">Sewon</a>
+                                            </li>
+                                            <li>RS Patmasuri di
+                                                <a href="/wiki/Sewon,_Bantul" title="Sewon, Bantul">Sewon</a>
+                                            </li>
+                                            <li>RS Permata Husada di
+                                                <a href="/wiki/Pleret,_Bantul" title="Pleret, Bantul">Pleret</a>
+                                            </li>
+                                            <li>RS Santa Elisabeth di
+                                                <a href="/wiki/Bambanglipuro,_Bantul"
+                                                    title="Bambanglipuro, Bantul">Bambanglipuro</a>
+                                            </li>
+
+                                        </div>
+                                        <div class="col-md-6 col-sm-12">
+                                            <li>RS Nur Hidayah di
+                                                <a href="/wiki/Jetis,_Bantul" title="Jetis, Bantul">Jetis</a>
+                                            </li>
+                                            <li>RS Rachma Husada di
+                                                <a href="/wiki/Jetis,_Bantul" title="Jetis, Bantul">Jetis</a>
+                                            </li>
+                                            <li>RSKIA Umi Khasanah di
+                                                <a href="/wiki/Bantul,_Bantul" title="Bantul, Bantul">Bantul</a>
+                                            </li>
+                                            <li>RS UII di
+                                                <a href="/wiki/Pandak,_Bantul" title="Pandak, Bantul">Pandak</a>
+                                            </li>
+
+                                        </div>
+                                    </div>
+                                </ol>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header alert alert-info">
+                    <h4 id="website">Website</h4>
+                </div>
+                <div class="card-body">
+                    <a href="https://dpmpt.bantulkab.go.id/web/page/profil-kabupaten-bantul#" target="_blank"
+                        rel="noopener noreferrer">https://dpmpt.bantulkab.go.id/web/page/profil-kabupaten-bantul#</a>
+                </div>
+                <div class="card-body">
+                    <a href="https://bantulkab.bps.go.id/id/statistics-table/2/MTM4IzI=/prevalensi-jenis-penyakit-per-kecamatan.html"
+                        target="_blank"
+                        rel="noopener noreferrer">https://bantulkab.bps.go.id/id/statistics-table/2/MTM4IzI=/prevalensi-jenis-penyakit-per-kecamatan.html</a>
+                </div>
+
+                <div class="card-body">
+                    <a href="https://dataset.bantulkab.go.id/dataset/prevalensi-jenis-penyakit" target="_blank"
+                        rel="noopener noreferrer">https://dataset.bantulkab.go.id/dataset/prevalensi-jenis-penyakit</a>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header alert alert-info">
+                    <h4 id="grafik">Grafik data penyakit</h4>
+                </div>
+                <div class="card-body">
+                    <!-- Grafik Penyakit Berdasarkan Kecamatan -->
+                    <h1 style="text-align: center;">Grafik Penyakit Berdasarkan Kecamatan</h1>
+                    <div style="width: 80%; margin: auto;">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <script>
+                        // Ambil data dari data.php
+                        fetch('data.php')
+                            .then(response => response.json())
+                            .then(data => {
+                                const labels = data.map(item => item.kecamatan); // Nama kecamatan
+                                const values = data.map(item => item.jumlah);   // Nilai jumlah
+            
+                                // Buat grafik
+                                const ctx = document.getElementById('myChart').getContext('2d');
+                                new Chart(ctx, {
+                                    type: 'bar', // Jenis grafik
+                                    data: {
+                                        labels: labels, // Label untuk sumbu x
+                                        datasets: [{
+                                            label: 'Jumlah Penyakit per Kecamatan',
+                                            data: values, // Data untuk sumbu y
+                                            backgroundColor: 'rgb(249, 219, 186)',
+                                            borderColor: 'rgb(240, 187, 120)',
+                                            borderWidth: 1
+                                        }]
+                                    },
+                                    options: {
+                                        responsive: true,
+                                        scales: {
+                                            y: {
+                                                beginAtZero: true
+                                            }
+                                        }
+                                    }
+                                });
+                            })
+                            .catch(error => console.error('Error:', error));
+                    </script>
+                </div>
+            
+                <div class="text-center mb-4">
+                    <!-- Tombol dengan link ke halaman Tabel -->
+                    <a href="index.php" class="btn btn-success" style="width: 200px; height: 50px;">Tabel</a>
+                </div>
+            </div>
+            
+            
+
+            <div class="card mt-4">
+                <div class="card-header alert alert-info">
+                    <h4 id="peta">Peta</h4>
+                </div>
+                <div class="card-body">
+                    <div class="mapouter">
+                        <div class="gmap_canvas"><iframe width="820" height="560" id="gmap_canvas" v<iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252926.31603349885!2d110.19794179252679!3d-7.897817578515161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a55c76cdc539f%3A0x3027a76e352bc00!2sBantul%20Regency%2C%20Special%20Region%20of%20Yogyakarta!5e0!3m2!1sen!2sid!4v1733226274885!5m2!1sen!2sid"
+                                width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                                href="https://textcaseconvert.com"></a><br><a
+                                href="https://www.analarmclock.com"></a><br>
+                            <style>
+                                .mapouter {
+                                    position: relative;
+                                    text-align: right;
+                                    height: 560px;
+                                    width: 620px;
+                                }
+                            </style><a href="https://www.ongooglemaps.com">custom google maps embed</a>
+                            <style>
+                                .gmap_canvas {
+                                    overflow: hidden;
+                                    background: none !important;
+                                    height: 560px;
+                                    width: 820px;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card mt-4">
+                <div class="card-header alert alert-info">
+                    <h4 id="kritikdansaran">Kritik dan Saran</h4>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Isikan nama anda">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Kritik dan Saran</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="text-end">
+                            <button type="button" class="btn btn-success">Kirim</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Pembuat</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Nama : Hanifah Sabdani <br>
+                            NIM : 23/521110/SV/23376 <br>
+                            Kelas : PGWEB - B
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hilangkan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

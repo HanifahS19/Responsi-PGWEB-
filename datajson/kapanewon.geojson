@@ -1,0 +1,24 @@
+{
+"type": "FeatureCollection",
+"name": "kapanewon",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "No": 1, "Kapanewon": "Srandakan", "X": 417733.04, "Y": 912.022409 }, "geometry": { "type": "Point", "coordinates": [ 20.217919672486676, -89.263117622297059 ] } },
+{ "type": "Feature", "properties": { "No": 2, "Kapanewon": "Sanden", "X": 419139.35, "Y": 9116718.42 }, "geometry": { "type": "Point", "coordinates": [ 110.266268885352815, -7.99015623516592 ] } },
+{ "type": "Feature", "properties": { "No": 3, "Kapanewon": "Kretek", "X": 422899.6, "Y": 9116542.42 }, "geometry": { "type": "Point", "coordinates": [ 110.300384974289088, -7.991807271605902 ] } },
+{ "type": "Feature", "properties": { "No": 4, "Kapanewon": "Pundong", "X": 426550.64, "Y": 9118415.08 }, "geometry": { "type": "Point", "coordinates": [ 110.333540676107432, -7.974923901895516 ] } },
+{ "type": "Feature", "properties": { "No": 5, "Kapanewon": "Bambanglipuro", "X": 422063.74, "Y": 9120627.14 }, "geometry": { "type": "Point", "coordinates": [ 110.292864162581949, -7.954848595980042 ] } },
+{ "type": "Feature", "properties": { "No": 6, "Kapanewon": "Pandak", "X": 422606.22, "Y": 9126950.79 }, "geometry": { "type": "Point", "coordinates": [ 110.297882926859529, -7.897660150304218 ] } },
+{ "type": "Feature", "properties": { "No": 7, "Kapanewon": "Bantul", "X": 425665.39, "Y": 9129554.29 }, "geometry": { "type": "Point", "coordinates": [ 110.325672542636866, -7.874157235026802 ] } },
+{ "type": "Feature", "properties": { "No": 8, "Kapanewon": "Jetis", "X": 430869.11, "Y": 9125200.75 }, "geometry": { "type": "Point", "coordinates": [ 110.372816782941115, -7.913608480112792 ] } },
+{ "type": "Feature", "properties": { "No": 9, "Kapanewon": "Imogiri", "X": 432064.28, "Y": 9124178.0 }, "geometry": { "type": "Point", "coordinates": [ 110.383645662207712, -7.922875470311923 ] } },
+{ "type": "Feature", "properties": { "No": 10, "Kapanewon": "Dlingo", "X": 441438.85, "Y": 9123887.51 }, "geometry": { "type": "Point", "coordinates": [ 110.468691416576235, -7.925620072258183 ] } },
+{ "type": "Feature", "properties": { "No": 11, "Kapanewon": "Pleret", "X": 432877.76, "Y": 9130020.51 }, "geometry": { "type": "Point", "coordinates": [ 110.391103153226936, -7.870040317075919 ] } },
+{ "type": "Feature", "properties": { "No": 12, "Kapanewon": "Piyungan", "X": 442238.17, "Y": 9133564.08 }, "geometry": { "type": "Point", "coordinates": [ 110.47605330257268, -7.838102505260547 ] } },
+{ "type": "Feature", "properties": { "No": 13, "Kapanewon": "Banguntapan", "X": 434853.08, "Y": 9136461.83 }, "geometry": { "type": "Point", "coordinates": [ 110.40910374308325, -7.811803302027887 ] } },
+{ "type": "Feature", "properties": { "No": 14, "Kapanewon": "Sewon", "X": 430062.79, "Y": 9133823.94 }, "geometry": { "type": "Point", "coordinates": [ 110.365620502323011, -7.835600236626949 ] } },
+{ "type": "Feature", "properties": { "No": 15, "Kapanewon": "Kasihan", "X": 425938.64, "Y": 9135307.33 }, "geometry": { "type": "Point", "coordinates": [ 110.328234769250969, -7.822125000644626 ] } },
+{ "type": "Feature", "properties": { "No": 16, "Kapanewon": "Pajangan", "X": 424243.01, "Y": 9128903.53 }, "geometry": { "type": "Point", "coordinates": [ 110.312760326772491, -7.880022385274935 ] } },
+{ "type": "Feature", "properties": { "No": 17, "Kapanewon": "Sedayu", "X": 418066.67, "Y": 9135644.96 }, "geometry": { "type": "Point", "coordinates": [ 110.256842263328153, -7.818951524451771 ] } }
+]
+}
